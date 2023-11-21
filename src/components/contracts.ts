@@ -207,3 +207,8 @@ export const usdcContractConfig = {
   address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
   abi: erc20ABI,
 } as const
+
+export const gcreContractConfig = {
+  address: '0x0488efdeb8Cf3B5C1A6aFb0a5F84A2d0B37A5D4C',
+  abi: erc20ABI,
+} as const

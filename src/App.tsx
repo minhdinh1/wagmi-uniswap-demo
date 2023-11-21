@@ -17,6 +17,8 @@ import { WatchContractEvents } from './components/WatchContractEvents'
 import { WatchPendingTransactions } from './components/WatchPendingTransactions'
 import { WriteContract } from './components/WriteContract'
 import { WriteContractPrepared } from './components/WriteContractPrepared'
+import { GetContractReads } from './components/GetContractReads'
+import { GetUniSwapInfo } from './components/GetUniSwapInfo'
 
 export function App() {
   const { isConnected } = useAccount()
@@ -52,6 +54,14 @@ export function App() {
           <hr />
           <h2>Read Contracts</h2>
           <ReadContracts />
+          <br />
+          <hr />
+          <h2>GetContractReads</h2>
+          <GetContractReads />
+          <br />
+          <hr />
+          <h2>Pool Info</h2>
+          <GetUniSwapInfo />
           <br />
           <hr />
           <h2>Read Contracts Infinite</h2>

@@ -1,24 +1,28 @@
 import { useContractReads } from 'wagmi'
 
-import { wagmiContractConfig } from './contracts'
+import { gcreContractConfig } from './contracts'
 import { stringify } from '../utils/stringify'
 
 export function ReadContracts() {
   const { data, isSuccess, isLoading } = useContractReads({
     contracts: [
       {
-        ...wagmiContractConfig,
+        ...gcreContractConfig,
         functionName: 'balanceOf',
         args: ['0xa5cc3c03994DB5b0d9A5eEdD10CabaB0813678AC'],
       },
       {
-        ...wagmiContractConfig,
+        ...gcreContractConfig,
         functionName: 'name',
       },
       {
-        ...wagmiContractConfig,
+        ...gcreContractConfig,
         functionName: 'totalSupply',
       },
+      {
+        ...gcreContractConfig,
+        functionName: 'symbol'
+      }
     ],
   })
 

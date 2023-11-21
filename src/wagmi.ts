@@ -1,5 +1,6 @@
 import { configureChains, createConfig } from 'wagmi'
 import { goerli, mainnet } from 'wagmi/chains'
+import { infuraProvider } from 'wagmi/providers/infura'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
@@ -12,8 +13,9 @@ const walletConnectProjectId = '7a85755f142cdec178074e29348eccfb'
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [mainnet, ...(import.meta.env?.MODE === 'development' ? [goerli] : [])],
   [
-    publicProvider(),
+    infuraProvider({ apiKey: '1924f881a7044c519d26b2a4d4a54cd2' }),
   ],
+  { batch: { multicall: true } },
 )
 
 export const config = createConfig({
