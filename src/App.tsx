@@ -19,6 +19,7 @@ import { WriteContract } from './components/WriteContract'
 import { WriteContractPrepared } from './components/WriteContractPrepared'
 import { GetContractReads } from './components/GetContractReads'
 import { GetUniSwapInfo } from './components/GetUniSwapInfo'
+import { Quoting } from './components/Quoting'
 
 export function App() {
   const { isConnected } = useAccount()
@@ -102,6 +103,10 @@ export function App() {
           <hr />
           <h2>Write Contract (Prepared)</h2>
           <WriteContractPrepared />
+          <h2>Quoting</h2>
+          <Quoting />
+          <br />
+          <hr />
         </>
       )}
     </>

@@ -1,4 +1,6 @@
 import { erc20ABI } from 'wagmi'
+import IUniswapV3PoolABI from '@uniswap/v3-core/artifacts/contracts/interfaces/IUniswapV3Pool.sol/IUniswapV3Pool.json'
+import Quoter from '@uniswap/v3-periphery/artifacts/contracts/lens/Quoter.sol/Quoter.json'
 
 export const wagmiContractConfig = {
   address: '0xFBA3912Ca04dd458c843e2EE08967fC04f3579c2',
@@ -211,4 +213,14 @@ export const usdcContractConfig = {
 export const gcreContractConfig = {
   address: '0x0488efdeb8Cf3B5C1A6aFb0a5F84A2d0B37A5D4C',
   abi: erc20ABI,
+} as const
+
+export const quoterContractConfig = {
+  address: '0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6',
+  abi: Quoter.abi,
+} as const
+
+export const poolFactoryContractConfig = {
+  address: '0x1F98431c8aD98523631AE4a59f267346ea31F984',
+  abi: IUniswapV3PoolABI.abi,
 } as const
