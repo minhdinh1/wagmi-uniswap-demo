@@ -97,7 +97,6 @@ const GetUniSwapPosition = () => {
 
     // Get number of positions
     const balance: number = await positionContract.balanceOf(address)
-    console.log('Position balanceOf: ', balance)
     const tokenIds = []
     for (let i = 0; i < balance; i++) {
       const tokenOfOwnerByIndex: number =
@@ -147,16 +146,12 @@ const GetUniSwapPosition = () => {
       slot0[1]
     )
 
-    console.log(poolInstance)
-
     const positionObject = new Position({
       pool: poolInstance,
       liquidity: position.liquidity.toString(),
       tickLower: position.tickLower,
       tickUpper: position.tickUpper,
     })
-
-    console.log(positionObject)
 
     const mintAmounts = positionObject.mintAmounts
 

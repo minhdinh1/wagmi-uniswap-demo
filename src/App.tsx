@@ -19,6 +19,7 @@ import { WriteContract } from './components/WriteContract'
 import { WriteContractPrepared } from './components/WriteContractPrepared'
 import { GetContractReads } from './components/GetContractReads'
 import { GetUniSwapInfo } from './components/GetUniSwapInfo'
+import { ModifyUniSwapPosition } from './components/ModifyUniSwapPosition'
 
 export function App() {
   const { isConnected } = useAccount()
@@ -62,6 +63,10 @@ export function App() {
           <hr />
           <h2>Pool Info</h2>
           <GetUniSwapInfo />
+          <br />
+          <hr />
+          <h2>Modify latest position</h2>
+          <ModifyUniSwapPosition />
           <br />
           <hr />
           <h2>Read Contracts Infinite</h2>
