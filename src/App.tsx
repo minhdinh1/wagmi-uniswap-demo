@@ -107,6 +107,10 @@ export function App() {
           <Quoting />
           <br />
           <hr />
+          <h2>Trading</h2>
+          <Trading />
+          <br />
+          <hr />
         </>
       )}
     </>

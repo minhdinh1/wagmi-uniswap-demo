@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { BigNumber, ethers } from 'ethers'
 
-const READABLE_FORM_LEN = 4
+const READABLE_FORM_LEN = 24
 
 export function fromReadableAmount(
   amount: number,
