@@ -35,11 +35,8 @@ export function walletClientToSigner(walletClient: WalletClient) {
     name: chain.name,
     ensAddress: chain.contracts?.ensRegistry?.address,
   }
-  console.log('Inside walletClientToSigner')
-  console.log(walletClient)
   const provider = new providers.Web3Provider(transport, network)
   const signer = provider.getSigner(account.address)
-  console.log(signer)
   return signer
 }
  
